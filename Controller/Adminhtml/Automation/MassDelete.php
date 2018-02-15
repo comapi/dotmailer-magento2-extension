@@ -73,12 +73,4 @@ class MassDelete extends \Magento\Backend\App\Action
 
         return $resultRedirect->setPath('*/*/');
     }
-
-    /**
-     * @return bool
-     */
-    protected function _isAllowed()
-    {
-        return $this->_authorization->isAllowed('Dotdigitalgroup_Email::automation');
-    }
 }
