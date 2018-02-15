@@ -8,6 +8,13 @@ use Magento\Ui\Component\MassAction\Filter;
 class MassDelete extends \Magento\Backend\App\Action
 {
     /**
+     * Authorization level of a basic admin session
+     *
+     * @see _isAllowed()
+     */
+    const ADMIN_RESOURCE = 'Dotdigitalgroup_Email::automation';
+
+    /**
      * @var \Dotdigitalgroup\Email\Model\ResourceModel\Automation\Collection
      */
     private $catalogCollection;
