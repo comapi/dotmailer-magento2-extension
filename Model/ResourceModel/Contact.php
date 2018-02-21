@@ -20,7 +20,7 @@ class Contact extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
     private $schelduleFactory;
 
     /**
-     * @var \Magento\Framework\DB\Sql\ExpressionFactory
+     * @var \Dotdigitalgroup\Email\Model\Sql\ExpressionFactory
      */
     private $expressionFactory;
 
@@ -41,7 +41,7 @@ class Contact extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
      * @param \Magento\Newsletter\Model\ResourceModel\Subscriber\CollectionFactory $subscriberCollection
      * @param \Magento\Customer\Model\ResourceModel\Customer\CollectionFactory $customerCollectionFactory
      * @param \Magento\Cron\Model\ScheduleFactory $schedule
-     * @param \Magento\Framework\DB\Sql\ExpressionFactory $expressionFactory
+     * @param \Dotdigitalgroup\Email\Model\Sql\ExpressionFactory $expressionFactory
      * @param null $connectionName
      */
     public function __construct(
@@ -49,7 +49,7 @@ class Contact extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
         \Magento\Newsletter\Model\ResourceModel\Subscriber\CollectionFactory $subscriberCollection,
         \Magento\Customer\Model\ResourceModel\Customer\CollectionFactory $customerCollectionFactory,
         \Magento\Cron\Model\ScheduleFactory $schedule,
-        \Magento\Framework\DB\Sql\ExpressionFactory $expressionFactory,
+        \Dotdigitalgroup\Email\Model\Sql\ExpressionFactory $expressionFactory,
         $connectionName = null
     ) {
         $this->expressionFactory = $expressionFactory;
