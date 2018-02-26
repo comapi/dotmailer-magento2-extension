@@ -383,10 +383,10 @@ class Cron
             ->setPageSize(1);
 
         if ($currentRunningJob->getSize()) {
-        $jobOfSameTypeAndScheduledAtDateAlreadyExecuted =  $this->cronCollection->create()
-            ->addFieldToFilter('job_code', $jobCode)
-            ->addFieldToFilter('scheduled_at', $currentRunningJob->getFirstItem()->getScheduledAt())
-            ->addFieldToFilter('status', ['in' => ['success', 'failed']]);
+            $jobOfSameTypeAndScheduledAtDateAlreadyExecuted =  $this->cronCollection->create()
+                ->addFieldToFilter('job_code', $jobCode)
+                ->addFieldToFilter('scheduled_at', $currentRunningJob->getFirstItem()->getScheduledAt())
+                ->addFieldToFilter('status', ['in' => ['success', 'failed']]);
 
         return ($jobOfSameTypeAndScheduledAtDateAlreadyExecuted->getSize()) ? true : false;
         }
