@@ -388,7 +388,7 @@ class Cron
                 ->addFieldToFilter('scheduled_at', $currentRunningJob->getFirstItem()->getScheduledAt())
                 ->addFieldToFilter('status', ['in' => ['success', 'failed']]);
 
-        return ($jobOfSameTypeAndScheduledAtDateAlreadyExecuted->getSize()) ? true : false;
+            return ($jobOfSameTypeAndScheduledAtDateAlreadyExecuted->getSize()) ? true : false;
         }
 
         return false;
