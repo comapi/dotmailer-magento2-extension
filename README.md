@@ -15,6 +15,28 @@ You are welcome to contribute to dotmailer for Magento! You can either:
 - Fix a bug: please clone and use our [Develop branch](https://github.com/dotmailer/dotmailer-magento2-extension/tree/develop) to submit your Pull Request
 - Request a feature on our [community forum](https://support.dotmailer.com/hc/en-gb/community/topics/200432508-Feedback-and-feature-requests)
 
+## V2.4.7
+
+###### Bug fix
+- We've fixed a regression whereby the email from address was empty in the message object when email templates were not mapped in the extension
+- We've fixed a compatibility issue which caused fatal email template errors when using Magento 2.1.9 and below with the version 2.4.4 of the extension
+- An error would occur while sending registration email to customer created via script in Magento 2.2.3 - this is no longer happens [#13888](https://github.com/magento/magento2/issues/13888)
+- We've fixed an issue which caused any default email template settings to not display properly in the configuration panel
+
+## V2.4.5
+
+###### Improvements
+- We've done some code refactoring to comply with Magento extension best practices
+- On installation, we now auto generate a unique secret key used to access extension dynamic content
+- We've changed our dynamic content blocks to be non-cacheable
+
+
+###### Bug fix
+- We've fixed an issue in the upgrade script whereby the abandoned cart report table was not created for version 2.3.8
+- Page Tracking data wasn't sent to dotmailer accounts located in region 2 or 3 ; this is now fixed 
+- The abandoned cart process wasn't stop when all items had been removed from the cart ; this no longer happens
+- We've fixed some issues related to saving the "Customer Addressbook Preference" setting (#501, #502)
+
 ## V2.4.4
 
 ###### New Features
