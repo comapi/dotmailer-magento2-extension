@@ -1,6 +1,6 @@
  dotmailer for Magento 2
  ======
- test1
+ test2
  
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
 
