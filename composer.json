@@ -1,8 +1,8 @@
 {
-  "name": "dotmailer/dotmailer-magento2-extension",
-  "description": "dotmailer integration for magento 2",
+  "name": "dotdigital/dotdigital-magento2-extension",
+  "description": "dotdigital integration for magento 2",
   "type": "magento2-module",
-  "version": "3.0.2",
+  "version": "1.0.0",
   "license": "MIT",
   "repositories": [
     {
@@ -59,6 +59,10 @@
     {
       "name": "Zygimantas",
       "email": "zygimantas.simkus@dotmailer.com"
+    },
+    {
+      "name": "Dave Baddeley",
+      "email": "contact@comapi.com"
     }
   ],
   "autoload": {

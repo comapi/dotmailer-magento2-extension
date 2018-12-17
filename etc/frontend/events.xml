@@ -1,7 +1,14 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_save_after">
+        <observer name="ddg_cpaas_cart_changed_observer" instance="Dotdigitalgroup\Email\Observer\Cpaas\CartChanged"/>
+    </event>
     <event name="customer_register_success">
         <observer name="ddg_customer_register_success" instance="Dotdigitalgroup\Email\Observer\Customer\NewAutomation"/>
+        <observer name="ddg_cpaas_customer_login_observer" instance="Dotdigitalgroup\Email\Observer\Cpaas\CreateUpdateProfile"/>
+    </event>
+    <event name="customer_login">
+        <observer name="ddg_cpaas_customer_login_observer" instance="Dotdigitalgroup\Email\Observer\Cpaas\CreateUpdateProfile"/>
     </event>
     <event name="newsletter_subscriber_save_after">
         <observer name="ddg_observer_subscriber_save_after" instance="Dotdigitalgroup\Email\Observer\Newsletter\NewsletterSubscriberSaveAfter"/>

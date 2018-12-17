@@ -1,0 +1,17 @@
+<?php
+
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+<?php $helper = $this->helper(\Dotdigitalgroup\Email\Helper\Cpaas::class); ?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Dotdigitalgroup_Email/js/webchat": {
+                "apiSpaceId": "<?= $helper->getApiSpaceId(); ?>",
+                "currentMagentoUserId": "<?= $helper->getCustomerId(); ?>",
+                "currentProfileId": "<?= $helper->getProfileId(); ?>"
+            }
+        }
+    }
+</script>

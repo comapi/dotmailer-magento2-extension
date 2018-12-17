@@ -1,7 +1,7 @@
 {
-  "name": "dotmailer-magento2-extension",
-  "version": "2.2.0",
-  "description": "dotmailer integration for Magento v2",
+  "name": "dotdigital-magento2-extension",
+  "version": "1.0.0",
+  "description": "dotdigital integration for Magento v2",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -22,7 +22,11 @@
     "marketing",
     "magento",
     "connector",
-    "integration"
+    "integration",
+    "comapi",
+    "chat",
+    "livechat",
+    "dotdigital"
   ],
   "authors": [
     {
@@ -36,6 +40,10 @@
     {
       "name": "Zygimantas",
       "email": "zygimantas.simkus@dotmailer.com"
+    },
+    {
+      "name": "Dave Baddeley",
+      "email": "contact@comapi.com"
     }
   ],
   "license": "MIT",

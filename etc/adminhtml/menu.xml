@@ -25,6 +25,11 @@
         <add id="Dotdigitalgroup_Email::abandoned" title="Abandoned Carts" module="Dotdigitalgroup_Email" sortOrder="240"
              action="dotdigitalgroup_email/abandoned" resource="Dotdigitalgroup_Email::abandoned"
              parent="Dotdigitalgroup_Email::marketing_automation_report"/>
+          <!-- CPaaS mneus -->
+          <add id="Dotdigitalgroup_Email::communications_system" title="Communications" module="Dotdigitalgroup_Email" sortOrder="100"
+             parent="Magento_Backend::system" resource="Dotdigitalgroup_Email::communications"/>
+          <add id="Dotdigitalgroup_Email::communications_settings" title="Settings" module="Dotdigitalgroup_Email" sortOrder="100"
+             parent="Dotdigitalgroup_Email::communications_system" resource="Dotdigitalgroup_Email::communications_settings" action="dotdigitalgroup_email/communications"/>
     </menu>
 </config>
 

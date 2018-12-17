@@ -1,6 +1,19 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
+        <!-- CPaaS -->
+        <ddg_cpaas_settings>
+            <settings>
+                <webchat_enabled>0</webchat_enabled>
+                <api_enabled>0</api_enabled>
+                <apispace_id></apispace_id>
+                <apispace_token></apispace_token>
+                <username></username>
+                <password></password>
+            </settings>
+        </ddg_cpaas_settings>
+
+        <!-- Marketing Automation -->
         <connector_api_credentials>
             <api>
                 <enabled>0</enabled>

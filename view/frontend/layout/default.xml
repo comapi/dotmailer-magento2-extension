@@ -6,6 +6,11 @@
             <block class="Magento\Framework\View\Element\Template"
                    name="emailCapture"
                    template="Dotdigitalgroup_Email::email/email_capture_newsletter.phtml"/>
+            <block class="Magento\Framework\View\Element\Template"
+                   name="ddg.webchat.tag"
+                   template="Dotdigitalgroup_Email::cpaas/webchat_code.phtml"
+                   ifconfig="ddg_cpaas_settings/settings/webchat_enabled"
+                   cacheable="false"/>
         </referenceContainer>
         <referenceContainer name="after.body.start">
             <block class="Magento\Framework\View\Element\Template"

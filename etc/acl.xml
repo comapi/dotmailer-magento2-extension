@@ -3,6 +3,9 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
+                <resource id="Dotdigitalgroup_Email::communications" title="dotdigital Communications" sortOrder="10">
+                    <resource id="Dotdigitalgroup_Email::communications_settings" title="Configure settings" sortOrder="10"/>
+                </resource>
                 <resource id="Magento_Backend::marketing">
                     <resource id="Dotdigitalgroup_Email::automation" title="Dotmailer Automation" sortOrder="10">
                         <resource id="Dotdigitalgroup_Email::automation_studio" title="Automation Studio" sortOrder="10"/>
