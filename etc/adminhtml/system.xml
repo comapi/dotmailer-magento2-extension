@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="ddg_automation" translate="label" sortOrder="510">
-            <label>dotdigital Marketing Automation</label>
+        <tab id="ddg_automation" translate="label" sortOrder="500">
+            <label>Engagement Cloud</label>
         </tab>
 
-        <tab id="ddg_cpaas" translate="label" sortOrder="500">
-            <label>dotdigital CPaaS</label>
+        <tab id="ddg_cpaas" translate="label" sortOrder="510">
+            <label>Engagement Cloud - CPaaS</label>
         </tab>
 
         <section id="ddg_cpaas_settings" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
-            <label>Settings</label>
+            <label>Account</label>
             <tab>ddg_cpaas</tab>
             <resource>Dotdigitalgroup_Email::communications_settings</resource>
             <group id="ddg_trial" translate="label" type="text" sortOrder="5" showInDefault="1" showInStore="0" showInWebsite="1">
@@ -30,6 +30,10 @@
                     <label>API Password</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
+                <!--<field id="auto_configure" translate="label comment tooltip" type="button" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Auto configure</label>
+                    <frontend_model>dotmailer\dotmailer-magento2-extension\Block\System\Config\Button</frontend_model>
+                </field>-->
                 <field id="apispace_token" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInStore="0" showInWebsite="1">
                     <label>API Token</label>
                     <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
@@ -38,11 +42,31 @@
                     <label>Enable Webchat</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <!--<field id="api_enabled" translate="label" type="select" sortOrder="20" showInDefault="1" showInStore="0" showInWebsite="1">
+            </group>
+        </section>
+
+        <section id="ddg_cpaas_chat" translate="label" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="0">
+            <label>Chat Settings</label>
+            <tab>ddg_cpaas</tab>
+            <resource>Dotdigitalgroup_Email::communications_chat</resource>
+            <group id="settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="0" showInWebsite="1">
+                <field id="webchat_enabled" translate="label" type="select" sortOrder="15" showInDefault="1" showInStore="0" showInWebsite="1">
+                    <label>Enable Webchat</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+
+        <section id="ddg_cpaas_cpaas" translate="label" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="0">
+            <label>CPaaS Settings</label>
+            <tab>ddg_cpaas</tab>
+            <resource>Dotdigitalgroup_Email::communications_chat</resource>
+            <group id="settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="0" showInWebsite="1">
+                <field id="api_enabled" translate="label" type="select" sortOrder="20" showInDefault="1" showInStore="0" showInWebsite="1">
                     <label>Enable CPaaS API</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>-->
-            </group>            
+                </field>
+            </group>
         </section>
 
         <section id="connector_api_credentials" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="0">
